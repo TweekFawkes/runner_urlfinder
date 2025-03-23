@@ -23,10 +23,10 @@ build:
     echo "END: Building urlfinder"
 
 webform:
-  - name: selector
-    prompt: CDN, Cloud, and WAF Detection
+  - name: domain_or_ip
+    prompt: Domain or IP Address
     type: text
 
 launch:
   type: binary
-  command: /go/bin/cdncheck -v -nc -d ${selector} -j -o outputs/output.json
+  command: /go/bin/cdncheck -v -nc -d ${domain_or_ip} -j -o outputs/output.json
