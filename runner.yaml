@@ -23,10 +23,10 @@ build:
     echo "END: Building urlfinder"
 
 webform:
-  - name: domain_or_ip
-    prompt: Domain or IP Address
+  - name: domain
+    prompt: Domain
     type: text
 
 launch:
   type: binary
-  command: /go/bin/cdncheck -v -nc -d ${domain_or_ip} -j -o outputs/output.json
+  command: /go/bin/urlfinder -v -nc -d ${domain} -j -o outputs/output.json
